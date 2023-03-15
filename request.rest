@@ -1,0 +1,21 @@
+POST http://localhost:3000/user/signup
+Content-Type: application/json
+
+{
+    "email":"juliana@mail.com",
+    "name":"Juliana",
+    "password":"12345",
+    "role": "NORMAL"
+}
+
+###
+
+POST http://localhost:3000/user/login
+Content-Type: application/json
+
+{
+    "email":"juliana@mail.com",
+    "password":"12345"
+}
+
+###
