@@ -15,3 +15,9 @@ export class InvalidToken extends BaseError {
     super("Você não possui permissão para realizar essa ação. Faça o Login.",401)
   };
 };
+
+export class InvalidTime extends BaseError {
+  constructor(){
+    super("Horário inválido para marcar um show, insira um valor entre 8h e 23h.",401)
+  }
+}
