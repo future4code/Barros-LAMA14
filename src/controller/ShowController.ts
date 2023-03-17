@@ -5,7 +5,7 @@ import { GetShowInputDTO, ShowInputDTO } from "../model/Show"
 
 const showBusiness = new ShowBusiness()
 
-export class showController {
+export class ShowController {
      
     public signShow = async ( req: Request, res: Response) => {
 
