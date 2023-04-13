@@ -9,7 +9,7 @@ export class ShowDatabase extends BaseDatabase {
     public signShow = async ( show:Show ) => {
         try {
             await this.getConnection()
-            .insert({id:show.id,weekday:show.weekday,start_time:show.startHour,end_time:show.endHour,band_id:show.bandId})
+            .insert({id:show.id,week_day:show.weekday,start_time:show.startHour,end_time:show.endHour,band_id:show.bandId})
             .into(ShowDatabase.TABLE_NAME);
         } catch (error:any) {
             throw new Error (error.sqlMessage||error.message);
@@ -18,13 +18,14 @@ export class ShowDatabase extends BaseDatabase {
 
     public getAllShowsOnDate = async ( weekEnd:string) => {
         try {
-            const result = await this.getConnection()
-            .innerJoin({ B: "Bandas_Tabela"}, "S.band_id", "B.id")
-            .select ( "B.name", "B.music_genre")
-            .where ( "S.week_day", weekEnd)
-            .orderBy( "S.start_time", "asc");
 
-            return result
+            const queryResult = await this.getConnection()
+            .select("*")
+            .where({week_day: weekEnd})
+            .into(ShowDatabase.TABLE_NAME);
+
+            return queryResult
+
         } catch (error:any) {
             throw new Error (error.sqlMessage||error.message);
         }
