@@ -34,4 +34,27 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImQ3OGI4NTY5LWJkMmMt
 
 GET http://localhost:3000/band/c3c57103-5c69-4e81-8790-a7410a09c81b
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImQ3OGI4NTY5LWJkMmMtNDBkNC1iZjkyLTM1OTk1ODE5NDg2YyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY3ODkyMzcyMSwiZXhwIjoxNjc4OTI1NTIxfQ.rqOt5xrUP40wMg7jgcYJvTaZ5wzZIwJ7vuYa-Dp-bWk
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImQ3OGI4NTY5LWJkMmMtNDBkNC1iZjkyLTM1OTk1ODE5NDg2YyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY4MDcwMzg5NywiZXhwIjoxNjgwNzA1Njk3fQ.q2BF_krTEt4KMaxndbJwmG0nQ45WnsdGQES-59cwdEw
+
+###
+
+GET http://localhost:3000/show/
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImQ3OGI4NTY5LWJkMmMtNDBkNC1iZjkyLTM1OTk1ODE5NDg2YyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY4MTQyNDE4OCwiZXhwIjoxNjgxNDI1OTg4fQ.15CUtHShSPPJhlT8Fs5XunGTsItEhhwFHjkSsaZqE1E
+
+{
+    "weekday": "Sexta"
+}
+
+###
+
+POST http://localhost:3000/show/sign-show
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImQ3OGI4NTY5LWJkMmMtNDBkNC1iZjkyLTM1OTk1ODE5NDg2YyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY4MTQyNDE4OCwiZXhwIjoxNjgxNDI1OTg4fQ.15CUtHShSPPJhlT8Fs5XunGTsItEhhwFHjkSsaZqE1E
+
+{
+    "weekday": "Sexta",
+    "startHour": 20,
+    "endHour": 23,
+    "bandId": "c3c57103-5c69-4e81-8790-a7410a09c81b"
+}
